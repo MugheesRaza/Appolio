@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    tools:context=".child_Record">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="casual"
+            android:text="Add Child Record"
+            android:textColor="#fff"
+            android:textSize="20dp">
+
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/father_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FAFAFA"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="casual"
+            android:foregroundTint="#fff"
+            android:hint="Father Name"
+
+            android:inputType="textEmailAddress"
+            android:textColor="#fff"
+            android:textColorHint="#fff" />
+
+        <EditText
+            android:id="@+id/mother_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FAFAFA"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="casual"
+            android:hint="Mother Name"
+            android:inputType="textEmailAddress"
+            android:textColor="#fff"
+            android:textColorHint="#fff" />
+
+        <EditText
+            android:id="@+id/child_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FAFAFA"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:drawableLeft="@drawable/ic_child_care_black_24dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="casual"
+            android:hint="Child Name"
+            android:inputType="textEmailAddress"
+            android:textColor="#fff"
+            android:textColorHint="#fff" />
+
+        <EditText
+            android:id="@+id/parent_phonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FAFAFA"
+            android:drawableLeft="@drawable/ic_phone_black_24dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="casual"
+            android:hint="Phone number"
+            android:inputType="number"
+            android:textColor="#fff"
+            android:textColorHint="#fff" />
+
+        <EditText
+            android:id="@+id/child_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FAFAFA"
+            android:drawableLeft="@drawable/ic_home_black_24dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="casual"
+            android:hint="Address"
+            android:inputType="textEmailAddress"
+            android:textColor="#fff"
+            android:textColorHint="#fff" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:backgroundTint="#FAFAFA"
+                android:drawablePadding="5dp"
+                android:fontFamily="casual"
+                android:paddingRight="10dp"
+                android:text="Child gender"
+                android:textColor="#fff"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <Spinner
+                android:id="@+id/gender_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#fff"
+
+                android:fontFamily="casual"
+
+                android:paddingLeft="10dp"
+                android:textColor="#fff">
+
+            </Spinner>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="#FAFAFA"
+            android:drawablePadding="5dp"
+            android:fontFamily="casual"
+            android:paddingRight="10dp"
+            android:text="Child Date of Birth:"
+            android:textColor="#fff"
+            android:textSize="20dp">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="5dp"-->
+            <!--                android:layout_marginBottom="5dp"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:backgroundTint="#FAFAFA"-->
+            <!--                android:drawablePadding="5dp"-->
+            <!--                android:paddingRight="10dp"-->
+            <!--                android:text="D"-->
+            <!--                android:textSize="20dp">-->
+
+            <!--            </TextView>-->
+
+            <Spinner
+                android:id="@+id/date_birth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#fff"
+                android:fontFamily="casual"
+                android:paddingLeft="10dp"
+
+                android:textColor="#fff">
+
+            </Spinner>
+
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="5dp"-->
+            <!--                android:layout_marginBottom="5dp"-->
+            <!--                android:backgroundTint="#000"-->
+            <!--                android:drawablePadding="5dp"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:paddingRight="10dp"-->
+            <!--                android:text="M"-->
+            <!--                android:textSize="20dp">-->
+
+            <!--            </TextView>-->
+
+            <Spinner
+                android:id="@+id/month_birth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#fff"
+                android:fontFamily="casual"
+                android:paddingLeft="10dp"
+                android:textColor="#fff">
+
+            </Spinner>
+
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="5dp"-->
+            <!--                android:layout_marginBottom="5dp"-->
+            <!--                android:backgroundTint="#000"-->
+            <!--                android:drawablePadding="5dp"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:paddingRight="10dp"-->
+            <!--                android:text="Y"-->
+            <!--                android:textSize="20dp">-->
+
+            <!--            </TextView>-->
+
+            <Spinner
+                android:id="@+id/year_birth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#fff"
+                android:fontFamily="casual"
+                android:paddingLeft="10dp"
+                android:textColor="#fff">
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/child_bform"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FAFAFA"
+            android:drawableLeft="@drawable/ic_crop_landscape_black_24dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="casual"
+            android:hint="Child B-form number"
+            android:inputType="number"
+            android:textColor="#fff"
+            android:textColorHint="#fff" />
+
+        <EditText
+            android:id="@+id/parent_cnic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FAFAFA"
+            android:drawableLeft="@drawable/ic_credit_card_black_24dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="casual"
+            android:hint="Guardian's  CNIC"
+            android:inputType="number"
+            android:textColor="#fff"
+            android:textColorHint="#fff" />
+
+
+        <EditText
+            android:id="@+id/parent_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FAFAFA"
+            android:drawableLeft="@drawable/ic_email_black_24dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="casual"
+            android:hint="Guardian's  Email"
+            android:inputType="textEmailAddress"
+            android:textColor="#fff"
+            android:textColorHint="#fff" />
+
+        <Button
+            android:id="@+id/btn_add_childRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:background="@drawable/btn_background"
+            android:fontFamily="casual"
+            android:padding="10dp"
+            android:text="Add Record"
+            android:textColor="@color/secondaryDarkColor" />
+    </LinearLayout>
+
+
+</ScrollView>

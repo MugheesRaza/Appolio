@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".update_child_record">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="casual"
+            android:text="Update Child Record"
+            android:gravity="center_horizontal"
+            android:textColor="#fff"
+            android:textSize="20dp">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/etname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FAFAFA"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:drawableLeft="@drawable/ic_child_care_black_24dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="casual"
+            android:hint="Child Name"
+            android:inputType="textEmailAddress"
+            android:textColor="#fff"
+            android:textColorHint="#fff">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/etfather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FAFAFA"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="casual"
+            android:foregroundTint="#fff"
+            android:hint="Father Name"
+
+            android:inputType="textEmailAddress"
+            android:textColor="#fff"
+            android:textColorHint="#fff">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/etmother"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FAFAFA"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="casual"
+            android:hint="Mother Name"
+            android:inputType="textEmailAddress"
+            android:textColor="#fff"
+            android:textColorHint="#fff" >
+
+        </EditText>
+
+
+        <EditText
+            android:id="@+id/etaddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FAFAFA"
+            android:drawableLeft="@drawable/ic_home_black_24dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="casual"
+            android:hint="Address"
+            android:inputType="textEmailAddress"
+            android:textColor="#fff"
+            android:textColorHint="#fff">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/parent_phonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FAFAFA"
+            android:drawableLeft="@drawable/ic_phone_black_24dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="casual"
+            android:hint="Phone number"
+            android:inputType="number"
+            android:textColor="#fff"
+            android:textColorHint="#fff" />
+        <EditText
+            android:id="@+id/child_bform"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FAFAFA"
+            android:drawableLeft="@drawable/ic_crop_landscape_black_24dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="casual"
+            android:hint="Child B-form number"
+            android:inputType="number"
+            android:textColor="#fff"
+            android:textColorHint="#fff" />
+
+        <EditText
+            android:id="@+id/parent_cnic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FAFAFA"
+            android:drawableLeft="@drawable/ic_credit_card_black_24dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="casual"
+            android:hint="Guardian's  CNIC"
+            android:inputType="number"
+            android:textColor="#fff"
+            android:textColorHint="#fff" />
+
+        <EditText
+            android:id="@+id/parent_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FAFAFA"
+            android:drawableLeft="@drawable/ic_email_black_24dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="casual"
+            android:hint="Guardian's  Email"
+            android:inputType="textEmailAddress"
+            android:textColor="#fff"
+            android:textColorHint="#fff" />
+
+        <Button
+            android:id="@+id/btnupdtae"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:background="@drawable/btn_background"
+            android:fontFamily="casual"
+            android:padding="10dp"
+            android:text="Update Record"
+            android:textColor="@color/secondaryDarkColor">
+
+        </Button>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/userProfile"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="Profile" />
+        <item
+            android:id="@+id/child_history"
+            android:icon="@drawable/ic_mood_black_24dp"
+            android:title="Child History" />
+    </group>
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/map"
+                android:icon="@drawable/ic_location_on_black_24dp"
+                android:title="Locations" />
+            <item
+                android:id="@+id/addchild"
+                android:icon="@drawable/ic_local_hospital_black_24dp"
+                android:title="Vaccinate Child" />
+            <item
+                android:id="@+id/mail_parent"
+                android:icon="@drawable/ic_send_black_24dp"
+                android:title="Mail" />
+        </menu>
+    </item>
+
+</menu>

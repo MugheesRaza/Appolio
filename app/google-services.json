@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "18463849163",
+    "firebase_url": "https://appolio-1201a.firebaseio.com",
+    "project_id": "appolio-1201a",
+    "storage_bucket": "appolio-1201a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18463849163:android:545e122c25751a0909394e",
+        "android_client_info": {
+          "package_name": "com.example.appolio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "18463849163-fgq61viqfslha60o6nqc04r6auv6o4qt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.appolio",
+            "certificate_hash": "f734e3e6e2d8b21e545fd05ad6a9aff69559c91c"
+          }
+        },
+        {
+          "client_id": "18463849163-lithpisth4bv654hpcbhdlfolfnpknmm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbJ4dUZj0t4Sdy3cN7srXIdYpVZeXaQRQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "18463849163-lithpisth4bv654hpcbhdlfolfnpknmm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
