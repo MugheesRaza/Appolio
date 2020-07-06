@@ -87,6 +87,7 @@ public class child_history extends Fragment {
         activity = (drawer_Activity) getActivity();
 
         cnic = activity.getCnic();
+
         recyclerView = v.findViewById(R.id.childRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 

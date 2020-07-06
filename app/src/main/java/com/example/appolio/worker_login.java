@@ -93,17 +93,16 @@ public class worker_login extends AppCompatActivity {
             txtpassword = password.getText().toString();
             if (txtemail.equals("") || txtpassword.equals("")) {
                 Toasty.error(getApplicationContext(), "Please enter all fields", Toasty.LENGTH_SHORT).show();
-            } else if (txtpassword.length() <= 6) {
-                Toasty.error(getApplicationContext(), "Please enter password greater then 6 ", Toasty.LENGTH_LONG).show();
+            } else if (txtpassword.length() <= 7) {
+                Toasty.error(getApplicationContext(), "Please enter password greater then 7 ", Toasty.LENGTH_LONG).show();
             } else if (!isEmailValid(txtemail)) {
                 email.setError("Invalid Email");
                 email.requestFocus();
                 Toasty.error(getApplicationContext(), "Please enter valid email", Toasty.LENGTH_SHORT).show();
                 return;
-            } else {
+            } else
+                {
                 fetchCNIC();
-
-
             }
 
 

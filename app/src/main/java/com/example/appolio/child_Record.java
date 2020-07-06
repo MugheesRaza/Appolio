@@ -161,8 +161,8 @@ public class child_Record extends AppCompatActivity {
             return;
         } else if (txt_address.length() < 15) {
             Toasty.error(getApplicationContext(), "Address length greater than 15 required", Toasty.LENGTH_SHORT).show();
-        } else if (txt_address.length() > 50) {
-            Toasty.error(getApplicationContext(), "Address length less than 50 required", Toasty.LENGTH_SHORT).show();
+        } else if (txt_address.length() > 100) {
+            Toasty.error(getApplicationContext(), "Address length less than 100 required", Toasty.LENGTH_SHORT).show();
 
         } else if (txt_bform.length() < 13 || txt_bform.length() > 13) {
             childBfom.setError("Invalid Bform");

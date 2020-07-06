@@ -43,6 +43,12 @@ public class send_mail extends Fragment {
         {
             Toasty.error(getContext(),"Please enter all fields",Toasty.LENGTH_SHORT).show();
         }
+        else if (!isEmailValid(editTextTo.getText().toString())){
+            editTextTo.setError("Invalid Email");
+            editTextTo.requestFocus();
+            Toasty.error(getContext(), "Please enter valid email", Toasty.LENGTH_SHORT).show();
+            return;
+        }
         else {
             String mailList = editTextTo.getText().toString();
             String[] mails = mailList.split(",");
@@ -59,6 +65,11 @@ public class send_mail extends Fragment {
             startActivity(Intent.createChooser(intent,"Choose an email client"));
         }
 
+
+    }
+    boolean isEmailValid(CharSequence email) {
+
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
 
     }
 }

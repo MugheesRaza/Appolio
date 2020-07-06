@@ -63,7 +63,7 @@ public class vaccine_list extends RecyclerView.Adapter<vaccine_list.ViewHolder> 
            public void onClick(View v) {
 
                final AlertDialog.Builder builder = new AlertDialog.Builder(context);
-               builder.setMessage("Are You sure you want to assign this vaccine");
+               builder.setMessage("Are You sure you want to use this vaccine");
                builder.setCancelable(true);
                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                    @Override

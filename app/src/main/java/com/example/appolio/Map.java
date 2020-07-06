@@ -50,10 +50,6 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback {
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
-
-
-
     }
 
     @Override
@@ -109,6 +105,7 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback {
         if (dob.after(now)) {
             age = 0;
         }
+
         int year1 = now.get(Calendar.YEAR);
         int year2 = dob.get(Calendar.YEAR);
         age = year1 - year2;

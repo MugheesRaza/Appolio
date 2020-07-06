@@ -133,7 +133,7 @@
             android:layout_margin="5dp"
             android:backgroundTint="#fff"
             android:fontFamily="casual"
-            android:hint="Confirm Passwrod"
+            android:hint="Confirm Password"
             android:inputType="textPassword"
             android:padding="15dp"
             android:textColor="#fff"

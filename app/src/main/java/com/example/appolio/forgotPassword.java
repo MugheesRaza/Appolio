@@ -68,7 +68,6 @@ public class forgotPassword extends AppCompatActivity {
                             pd.dismiss();
                             Toasty.info(getApplicationContext(), "Please go to this email and make a new password", Toasty.LENGTH_LONG).show();
 
-
                         }
                         else {
                             pd.dismiss();
