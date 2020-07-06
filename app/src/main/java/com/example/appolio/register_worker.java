@@ -158,31 +158,9 @@ public class register_worker extends AppCompatActivity {
             Toasty.error(getApplicationContext(), "Invalid phone number", Toasty.LENGTH_SHORT).show();
         }
         else {
-            final String id = databaseReference.push().getKey();
-            final register_worker_model worker_model = new register_worker_model(txtcnic, txtemail, txtgender, txtusername, txtpassword, txtphonenumber, txtcnfrimpassword, role, status);
-
-            databaseReference.orderByChild("cnic").equalTo(txtcnic).addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                    for (DataSnapshot snapshot: dataSnapshot.getChildren()){
-                        if (snapshot.exists()){
-                            cnic.requestFocus();
-                            Toasty.error(getApplicationContext(), "This cnic is already used ", Toasty.LENGTH_SHORT).show();
-                            return;
-                        }
-                        else {
-                            databaseReference.child(id).setValue(worker_model);
-                        }
-                    }
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                }
-            });
-
+            String id = databaseReference.push().getKey();
+            register_worker_model worker_model = new register_worker_model(txtcnic, txtemail, txtgender, txtusername, txtpassword, txtphonenumber, txtcnfrimpassword, role, status);
+            databaseReference.child(id).setValue(worker_model);
 
             AlertDialog.Builder builder = new AlertDialog.Builder(register_worker.this);
             builder.setMessage("Your profile is delivered to the administration just wait some time to approve your profile.")
