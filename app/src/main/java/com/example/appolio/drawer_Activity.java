@@ -90,6 +90,11 @@ public class drawer_Activity extends AppCompatActivity implements NavigationView
                 Intent imap = new Intent(getApplicationContext(),Map.class);
                 startActivity(imap);
                 break;
+            case R.id.logout:
+                Intent logout  = new Intent(getApplicationContext(),worker_login.class);
+                startActivity(logout);
+                finish();
+                break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;

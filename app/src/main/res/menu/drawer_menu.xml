@@ -27,6 +27,10 @@
                 android:id="@+id/mail_parent"
                 android:icon="@drawable/ic_send_black_24dp"
                 android:title="Mail" />
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/ic_airline_seat_individual_suite_black_24dp"
+                android:title="Log Out" />
         </menu>
     </item>
 
