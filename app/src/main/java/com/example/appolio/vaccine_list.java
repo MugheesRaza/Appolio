@@ -145,12 +145,6 @@ public class vaccine_list extends RecyclerView.Adapter<vaccine_list.ViewHolder> 
         }
 
 
-//    public vaccine_list(Activity context, List<vaccine> vaccineList) {
-//
-//        super( context,R.layout.list_layout,vaccineList);
-//        this.mcontext =  context;
-//        this.vaccineList = vaccineList;
-//    }
 
 
 

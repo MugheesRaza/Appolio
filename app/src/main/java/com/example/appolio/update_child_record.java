@@ -4,12 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -48,10 +46,43 @@ public class update_child_record extends AppCompatActivity {
         btnupdate = findViewById(R.id.btnupdtae);
         childBfom = findViewById(R.id.child_bform);
         gardianCNIC = findViewById(R.id.parent_cnic);
-        gardianEmail = findViewById(R.id.parent_email);
+        gardianEmail = findViewById(R.id.email_update);
         phonenumber = findViewById(R.id.parent_phonenumber);
         ref = FirebaseDatabase.getInstance().getReference("CHILD RECORD");
 
+
+        ref.orderByChild("cninc").equalTo(fathercnic).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    if (snapshot.exists()) {
+
+                        String childname = (String) snapshot.child("childname").getValue();
+                        String fathername = (String) snapshot.child("fathername").getValue();
+                        String mothername = (String) snapshot.child("mothername").getValue();
+                        String address = (String) snapshot.child("address").getValue();
+                        String childbform = (String) snapshot.child("bForm").getValue();
+                        String cnic = (String) snapshot.child("cninc").getValue();
+                        String email = (String) snapshot.child("emial").getValue();
+                        String phonmber = (String) snapshot.child("phonenumber").getValue();
+                        chname.setText(childname);
+                        fhname.setText(fathername);
+                        moname.setText(mothername);
+                        adres.setText(address);
+                        childBfom.setText(childbform);
+                        gardianCNIC.setText(cnic);
+                        gardianEmail.setText(email);
+                        phonenumber.setText(phonmber);
+
+                    }
+                    }
+                }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
         btnupdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -130,8 +161,9 @@ public class update_child_record extends AppCompatActivity {
                         snapshot.getRef().child("address").setValue(txtadress);
                         snapshot.getRef().child("bForm").setValue(txt_bform);
                         snapshot.getRef().child("cninc").setValue(txt_Cnic);
-                        snapshot.getRef().child("email").setValue(txt_email);
+                        snapshot.getRef().child("emial").setValue(txt_email);
                         snapshot.getRef().child("phonenumber").setValue(txt_phone);
+
                         pd.dismiss();
                         Toasty.success(getApplicationContext(),"Record updated successfully",Toasty.LENGTH_SHORT).show();
 

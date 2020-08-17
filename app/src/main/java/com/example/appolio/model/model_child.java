@@ -3,13 +3,13 @@ package com.example.appolio.model;
 public class model_child {
     String fathername ,mothername ,childname ,phonenumber ,address,childgender,dateofBirth,bForm,cninc,emial;
     double latitude,longitude;
-    String company_name ,vaccine_name,vaccine_quality,vaccine_type,vaccine_id,workerCnic;
+    String company_name ,vaccine_name,vaccine_quality,vaccine_type,vaccine_id,workerCnic,vaccination_date;
 
 
     public model_child() {
     }
 
-    public model_child(String fathername, String mothername, String childname, String phonenumber, String address, String childgender, String dateofBirth, String bForm, String cninc, String emial, double latitude, double longitude, String company_name, String vaccine_name, String vaccine_quality, String vaccine_type, String vaccine_id, String workerCnic) {
+    public model_child(String fathername, String mothername, String childname, String phonenumber, String address, String childgender, String dateofBirth, String bForm, String cninc, String emial, double latitude, double longitude, String company_name, String vaccine_name, String vaccine_quality, String vaccine_type, String vaccine_id, String workerCnic, String vaccination_date) {
         this.fathername = fathername;
         this.mothername = mothername;
         this.childname = childname;
@@ -28,6 +28,7 @@ public class model_child {
         this.vaccine_type = vaccine_type;
         this.vaccine_id = vaccine_id;
         this.workerCnic = workerCnic;
+        this.vaccination_date = vaccination_date;
     }
 
     public String getFathername() {
@@ -92,6 +93,10 @@ public class model_child {
 
     public String getVaccine_type() {
         return vaccine_type;
+    }
+
+    public String getVaccination_date() {
+        return vaccination_date;
     }
 
     public String getVaccine_id() {

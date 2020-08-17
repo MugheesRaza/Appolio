@@ -62,7 +62,6 @@ public class history_adapter extends RecyclerView.Adapter<history_adapter.Viewho
                        Intent i = new Intent(context,update_child_record.class);
                        String cnic = h1.getCninc();
                        String name = h1.getChildname();
-
                        i.putExtra("childname",name);
                        i.putExtra("fathercnic",cnic);
                        context.startActivity(i);

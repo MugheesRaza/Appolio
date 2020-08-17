@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
-import android.Manifest;
 import android.Manifest.permission;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -18,7 +17,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.appolio.model.child_location;
 import com.example.appolio.model.model_child;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
@@ -26,8 +24,6 @@ import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -36,7 +32,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 import es.dmoral.toasty.Toasty;
 
@@ -90,7 +89,7 @@ public class child_Record extends AppCompatActivity {
         address = findViewById(R.id.child_address);
         childBfom = findViewById(R.id.child_bform);
         gardianCNIC = findViewById(R.id.parent_cnic);
-        gardianEmail = findViewById(R.id.parent_email);
+        gardianEmail = findViewById(R.id.email_update);
         addrecord = findViewById(R.id.btn_add_childRecord);
 
 
@@ -252,8 +251,12 @@ public class child_Record extends AppCompatActivity {
 //        String txt_Cnic = gardianCNIC.getText().toString();
 //        String txt_email = gardianEmail.getText().toString();
 
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+        String now = df.format(new Date());
+//        Toast.makeText(this,now, Toast.LENGTH_SHORT).show();
+
         String id = databaseReference.push().getKey();
-        model_child modelchild = new model_child(txt_fathername, txt_mothername, txt_childname, txt_phone, txt_address, txt_childgender, dateOfBirtth, txt_bform, txt_Cnic, txt_email, latitude, longitude, company_name, vaccine_name, vaccine_quality, vaccinetype, vaccine_id, cnic);
+        model_child modelchild = new model_child(txt_fathername, txt_mothername, txt_childname, txt_phone, txt_address, txt_childgender, dateOfBirtth, txt_bform, txt_Cnic, txt_email, latitude, longitude, company_name, vaccine_name, vaccine_quality, vaccinetype, vaccine_id, cnic,now);
         databaseReference.child(id).setValue(modelchild);
 
         reference.orderByChild("vaccine_id").equalTo(vaccine_id).addListenerForSingleValueEvent(new ValueEventListener() {
